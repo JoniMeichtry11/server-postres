@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 const client = new MercadoPagoConfig({
-  accessToken: "APP_USR-49489147475058-052710-2347f40a5c8567710091311cfcbe7f3d-1829675971",
+  accessToken: "APP_USR-6613867413576383-050207-acb09598131c55add17a9be173358bda-491581869",
 });
 
 const preference = new Preference(client);
@@ -19,15 +19,7 @@ app.use(express.static(path.join(__dirname, "../")));
 app.use(cors());
 
 app.get("/", function (req, res) {
-  res.send([
-    {
-      name: 'kevin',
-      apellido: 'meichtry',
-      id: 9839420734,
-      localidad: 'Maria Teresa',
-      age: 56
-    }
-  ])
+  res.send('Soy el server :)')
 });
 
 app.post("/create_preference", (req, res) => {
